@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [VeggieShop]    Script Date: 12/01/2026 3:44:12 CH ******/
+/****** Object:  Database [VeggieShop]    Script Date: 12/01/2026 8:01:31 CH ******/
 CREATE DATABASE [VeggieShop]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -84,7 +84,7 @@ ALTER DATABASE [VeggieShop] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANU
 GO
 USE [VeggieShop]
 GO
-/****** Object:  Table [dbo].[Categories]    Script Date: 12/01/2026 3:44:13 CH ******/
+/****** Object:  Table [dbo].[Categories]    Script Date: 12/01/2026 8:01:31 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -106,7 +106,7 @@ UNIQUE NONCLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Customers]    Script Date: 12/01/2026 3:44:13 CH ******/
+/****** Object:  Table [dbo].[Customers]    Script Date: 12/01/2026 8:01:31 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -130,7 +130,7 @@ UNIQUE NONCLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[GoodsReceiptDetails]    Script Date: 12/01/2026 3:44:13 CH ******/
+/****** Object:  Table [dbo].[GoodsReceiptDetails]    Script Date: 12/01/2026 8:01:31 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -147,7 +147,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[GoodsReceipts]    Script Date: 12/01/2026 3:44:13 CH ******/
+/****** Object:  Table [dbo].[GoodsReceipts]    Script Date: 12/01/2026 8:01:31 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -169,7 +169,7 @@ UNIQUE NONCLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Products]    Script Date: 12/01/2026 3:44:13 CH ******/
+/****** Object:  Table [dbo].[Products]    Script Date: 12/01/2026 8:01:31 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -195,7 +195,7 @@ UNIQUE NONCLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Roles]    Script Date: 12/01/2026 3:44:13 CH ******/
+/****** Object:  Table [dbo].[Roles]    Script Date: 12/01/2026 8:01:31 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -213,7 +213,7 @@ UNIQUE NONCLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SalesInvoiceDetails]    Script Date: 12/01/2026 3:44:13 CH ******/
+/****** Object:  Table [dbo].[SalesInvoiceDetails]    Script Date: 12/01/2026 8:01:31 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -230,7 +230,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SalesInvoices]    Script Date: 12/01/2026 3:44:13 CH ******/
+/****** Object:  Table [dbo].[SalesInvoices]    Script Date: 12/01/2026 8:01:31 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -252,7 +252,7 @@ UNIQUE NONCLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Suppliers]    Script Date: 12/01/2026 3:44:13 CH ******/
+/****** Object:  Table [dbo].[Suppliers]    Script Date: 12/01/2026 8:01:31 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -275,7 +275,7 @@ UNIQUE NONCLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UserRoles]    Script Date: 12/01/2026 3:44:13 CH ******/
+/****** Object:  Table [dbo].[UserRoles]    Script Date: 12/01/2026 8:01:31 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -290,7 +290,7 @@ CREATE TABLE [dbo].[UserRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Users]    Script Date: 12/01/2026 3:44:13 CH ******/
+/****** Object:  Table [dbo].[Users]    Script Date: 12/01/2026 8:01:31 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -303,6 +303,7 @@ CREATE TABLE [dbo].[Users](
 	[PasswordSalt] [varbinary](16) NOT NULL,
 	[IsActive] [bit] NOT NULL,
 	[CreatedAt] [datetime2](7) NOT NULL,
+	[RoleName] [nvarchar](20) NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[UserId] ASC
@@ -348,6 +349,8 @@ GO
 ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF_Users_IsActive]  DEFAULT ((1)) FOR [IsActive]
 GO
 ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF_Users_CreatedAt]  DEFAULT (sysdatetime()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[Users] ADD  DEFAULT ('Staff') FOR [RoleName]
 GO
 ALTER TABLE [dbo].[GoodsReceiptDetails]  WITH CHECK ADD  CONSTRAINT [FK_GRD_Product] FOREIGN KEY([ProductId])
 REFERENCES [dbo].[Products] ([ProductId])
