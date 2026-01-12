@@ -39,6 +39,10 @@
             this.mnuSales = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSalesInvoice = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStatistics = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuTopProducts = new System.Windows.Forms.ToolStripMenuItem();
+            this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuChangePassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +59,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.danhMụcToolStripMenuItem});
+            this.danhMụcToolStripMenuItem,
+            this.tàiKhoảnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -122,16 +127,48 @@
             // mnuSalesInvoice
             // 
             this.mnuSalesInvoice.Name = "mnuSalesInvoice";
-            this.mnuSalesInvoice.Size = new System.Drawing.Size(224, 26);
+            this.mnuSalesInvoice.Size = new System.Drawing.Size(179, 26);
             this.mnuSalesInvoice.Text = "Hóa đơn bán";
             this.mnuSalesInvoice.Click += new System.EventHandler(this.mnuSalesInvoice_Click);
             // 
             // mnuStatistics
             // 
+            this.mnuStatistics.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuTopProducts});
             this.mnuStatistics.Name = "mnuStatistics";
             this.mnuStatistics.Size = new System.Drawing.Size(227, 26);
             this.mnuStatistics.Text = "Thống kê";
             this.mnuStatistics.Click += new System.EventHandler(this.mnuStatistics_Click);
+            // 
+            // mnuTopProducts
+            // 
+            this.mnuTopProducts.Name = "mnuTopProducts";
+            this.mnuTopProducts.Size = new System.Drawing.Size(248, 26);
+            this.mnuTopProducts.Text = "Top sản phẩm bán chạy";
+            this.mnuTopProducts.Click += new System.EventHandler(this.mnuTopProducts_Click);
+            // 
+            // tàiKhoảnToolStripMenuItem
+            // 
+            this.tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuChangePassword,
+            this.mnuLogout});
+            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
+            // 
+            // mnuChangePassword
+            // 
+            this.mnuChangePassword.Name = "mnuChangePassword";
+            this.mnuChangePassword.Size = new System.Drawing.Size(224, 26);
+            this.mnuChangePassword.Text = "Đổi mật khẩu";
+            this.mnuChangePassword.Click += new System.EventHandler(this.mnuChangePassword_Click);
+            // 
+            // mnuLogout
+            // 
+            this.mnuLogout.Name = "mnuLogout";
+            this.mnuLogout.Size = new System.Drawing.Size(224, 26);
+            this.mnuLogout.Text = "Đăng xuất";
+            this.mnuLogout.Click += new System.EventHandler(this.mnuLogout_Click);
             // 
             // FrmMain
             // 
@@ -161,5 +198,9 @@
         private System.Windows.Forms.ToolStripMenuItem mnuSales;
         private System.Windows.Forms.ToolStripMenuItem mnuSalesInvoice;
         private System.Windows.Forms.ToolStripMenuItem mnuStatistics;
+        private System.Windows.Forms.ToolStripMenuItem mnuTopProducts;
+        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuChangePassword;
+        private System.Windows.Forms.ToolStripMenuItem mnuLogout;
     }
 }

@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
 using VeggieShop.BUS;
+using VeggieShop.DTO;  
 
 namespace VeggieShop.UI
 {
@@ -33,8 +25,14 @@ namespace VeggieShop.UI
                 return;
             }
 
+            
+            UserSession.Current.UserId = result.session.UserId;
+            UserSession.Current.Username = result.session.Username;
+            UserSession.Current.FullName = result.session.FullName;
+            UserSession.Current.RoleName = result.session.RoleName;
+
             this.Hide();
-            using (var f = new FrmMain(result.session))
+            using (var f = new FrmMain(result.session)) 
             {
                 f.ShowDialog();
             }
@@ -42,4 +40,3 @@ namespace VeggieShop.UI
         }
     }
 }
-

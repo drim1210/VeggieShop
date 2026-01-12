@@ -26,6 +26,14 @@ namespace VeggieShop.UI
         private void FrmMain_Load(object sender, EventArgs e)
         {
             lblWelcome.Text = $"Xin chào {_user.FullName} ({_user.RoleName})";
+
+            if (UserSession.Current.UserId == 0)
+            {
+                MessageBox.Show("Bạn chưa đăng nhập.");
+                Close();
+                return;
+            }
+
         }
 
         private void mnuSuppliers_Click(object sender, EventArgs e)
@@ -81,6 +89,40 @@ namespace VeggieShop.UI
             {
                 f.ShowDialog();
             }
+        }
+
+        private void mnuTopProducts_Click(object sender, EventArgs e)
+        {
+            using (var f = new FrmTopProducts())
+            {
+                f.ShowDialog();
+            }
+        }
+
+        private void mnuChangePassword_Click(object sender, EventArgs e)
+        {
+            using (var f = new FrmChangePassword())
+                f.ShowDialog();
+        }
+
+        private void mnuLogout_Click(object sender, EventArgs e)
+        {
+            var confirm = MessageBox.Show(
+                "Bạn có chắc chắn muốn đăng xuất?",
+                "Đăng xuất",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (confirm != DialogResult.Yes) return;
+
+            
+            UserSession.Current.UserId = 0;
+            UserSession.Current.Username = "";
+            UserSession.Current.FullName = "";
+            UserSession.Current.RoleName = "Staff";
+
+            
+            this.Close();
         }
     }
 }

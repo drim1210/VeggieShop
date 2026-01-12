@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using VeggieShop.BUS;
+using VeggieShop.Utils;
 
 namespace VeggieShop.UI
 {
@@ -165,5 +166,11 @@ namespace VeggieShop.UI
             txtReceiptSearch.Text = "";
             txtReceiptCode.Focus();
         }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            ExportHelper.ExportDataGridViewToExcel(dgvReceipts, "PhieuNhap");
+        }
+
     }
 }

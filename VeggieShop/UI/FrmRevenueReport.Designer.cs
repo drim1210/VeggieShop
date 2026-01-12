@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.dtTo = new System.Windows.Forms.DateTimePicker();
             this.radDay = new System.Windows.Forms.RadioButton();
@@ -35,7 +38,10 @@
             this.btnView = new System.Windows.Forms.Button();
             this.dgvRevenue = new System.Windows.Forms.DataGridView();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.chartRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnExportExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRevenue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).BeginInit();
             this.SuspendLayout();
             // 
             // dtFrom
@@ -103,11 +109,42 @@
             this.lblTotal.TabIndex = 6;
             this.lblTotal.Text = "Tổng doanh thu:";
             // 
+            // chartRevenue
+            // 
+            this.chartRevenue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea2.Name = "ChartArea1";
+            this.chartRevenue.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartRevenue.Legends.Add(legend2);
+            this.chartRevenue.Location = new System.Drawing.Point(392, 34);
+            this.chartRevenue.Name = "chartRevenue";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartRevenue.Series.Add(series2);
+            this.chartRevenue.Size = new System.Drawing.Size(362, 213);
+            this.chartRevenue.TabIndex = 7;
+            this.chartRevenue.Text = "chart1";
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.Location = new System.Drawing.Point(74, 223);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(111, 23);
+            this.btnExportExcel.TabIndex = 8;
+            this.btnExportExcel.Text = "Xuất Excel";
+            this.btnExportExcel.UseVisualStyleBackColor = true;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
+            // 
             // FrmRevenueReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExportExcel);
+            this.Controls.Add(this.chartRevenue);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.dgvRevenue);
             this.Controls.Add(this.btnView);
@@ -119,6 +156,7 @@
             this.Text = "FrmRevenueReport";
             this.Load += new System.EventHandler(this.FrmRevenueReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRevenue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +171,7 @@
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.DataGridView dgvRevenue;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartRevenue;
+        private System.Windows.Forms.Button btnExportExcel;
     }
 }

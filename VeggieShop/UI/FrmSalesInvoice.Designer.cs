@@ -45,11 +45,12 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvInvoices = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnReceiptSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dgvInvoices = new System.Windows.Forms.DataGridView();
+            this.btnExportExcel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).BeginInit();
             this.SuspendLayout();
@@ -204,6 +205,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hóa đơn";
             // 
+            // dgvInvoices
+            // 
+            this.dgvInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInvoices.Location = new System.Drawing.Point(12, 145);
+            this.dgvInvoices.MultiSelect = false;
+            this.dgvInvoices.Name = "dgvInvoices";
+            this.dgvInvoices.ReadOnly = true;
+            this.dgvInvoices.RowHeadersWidth = 51;
+            this.dgvInvoices.RowTemplate.Height = 24;
+            this.dgvInvoices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvInvoices.Size = new System.Drawing.Size(817, 121);
+            this.dgvInvoices.TabIndex = 9;
+            this.dgvInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoices_CellClick);
+            // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(135, 101);
@@ -241,26 +257,22 @@
             this.txtSearch.Size = new System.Drawing.Size(100, 22);
             this.txtSearch.TabIndex = 5;
             // 
-            // dgvInvoices
+            // btnExportExcel
             // 
-            this.dgvInvoices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInvoices.Location = new System.Drawing.Point(12, 145);
-            this.dgvInvoices.MultiSelect = false;
-            this.dgvInvoices.Name = "dgvInvoices";
-            this.dgvInvoices.ReadOnly = true;
-            this.dgvInvoices.RowHeadersWidth = 51;
-            this.dgvInvoices.RowTemplate.Height = 24;
-            this.dgvInvoices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInvoices.Size = new System.Drawing.Size(817, 121);
-            this.dgvInvoices.TabIndex = 9;
-            this.dgvInvoices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoices_CellClick);
+            this.btnExportExcel.Location = new System.Drawing.Point(378, 184);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(92, 23);
+            this.btnExportExcel.TabIndex = 54;
+            this.btnExportExcel.Text = "Xuất Excel";
+            this.btnExportExcel.UseVisualStyleBackColor = true;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // FrmSalesInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(923, 523);
+            this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
@@ -313,5 +325,6 @@
         private System.Windows.Forms.Button btnReceiptSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView dgvInvoices;
+        private System.Windows.Forms.Button btnExportExcel;
     }
 }

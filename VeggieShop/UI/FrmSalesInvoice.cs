@@ -7,9 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using System;
-using System.Windows.Forms;
+using VeggieShop.Utils;
 using VeggieShop.BUS;
 
 namespace VeggieShop.UI
@@ -215,7 +213,14 @@ namespace VeggieShop.UI
             txtInvoiceCode.Focus();
         }
 
-        // ---- Nếu Designer đang gắn nhầm event / thiếu handler thì để sẵn cho khỏi lỗi ----
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            
+            ExportHelper.ExportDataGridViewToExcel(dgvInvoices, "HoaDonBan");
+        }
+
+
+        
         private void FrmSalesInvoice_Click(object sender, EventArgs e) { }
     }
 }
