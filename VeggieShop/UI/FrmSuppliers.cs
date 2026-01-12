@@ -104,11 +104,6 @@ namespace VeggieShop.UI
             txtCode.Focus();
         }
 
-        private void FrmSuppliers_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvSuppliers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

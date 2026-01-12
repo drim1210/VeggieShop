@@ -96,10 +96,5 @@ namespace VeggieShop.UI
             chkActive.Checked = true;
             txtCode.Focus();
         }
-
-        private void FrmCategories_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

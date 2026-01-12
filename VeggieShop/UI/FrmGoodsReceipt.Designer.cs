@@ -176,7 +176,7 @@
             this.groupBox1.Controls.Add(this.dgvReceipts);
             this.groupBox1.Controls.Add(this.btnReceiptSearch);
             this.groupBox1.Controls.Add(this.txtReceiptSearch);
-            this.groupBox1.Location = new System.Drawing.Point(1, 291);
+            this.groupBox1.Location = new System.Drawing.Point(5, 184);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(896, 253);
             this.groupBox1.TabIndex = 51;
@@ -237,7 +237,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(111, 246);
+            this.btnClear.Location = new System.Drawing.Point(115, 139);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(86, 23);
             this.btnClear.TabIndex = 50;
@@ -247,7 +247,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(27, 246);
+            this.btnSave.Location = new System.Drawing.Point(31, 139);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(50, 23);
             this.btnSave.TabIndex = 49;
@@ -257,7 +257,7 @@
             // 
             // btnExportExcel
             // 
-            this.btnExportExcel.Location = new System.Drawing.Point(299, 245);
+            this.btnExportExcel.Location = new System.Drawing.Point(303, 138);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(99, 23);
             this.btnExportExcel.TabIndex = 52;
@@ -269,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 556);
+            this.ClientSize = new System.Drawing.Size(909, 438);
             this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClear);

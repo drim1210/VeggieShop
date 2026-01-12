@@ -241,8 +241,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmSuppliers";
             this.Text = "Tìm";
-            this.Load += new System.EventHandler(this.FrmSuppliers_Load_1);
-            this.Click += new System.EventHandler(this.FrmSuppliers_Load);
+            this.Load += new System.EventHandler(this.FrmSuppliers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

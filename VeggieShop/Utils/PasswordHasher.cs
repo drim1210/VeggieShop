@@ -43,5 +43,17 @@ namespace VeggieShop.Utils
             var hash = ComputeHash(password, salt);
             return FixedTimeEquals(hash, expectedHash);
         }
+
+        public static bool VerifyPassword(string password, byte[] hash, byte[] salt)
+            => Verify(password, salt, hash);
+
+        public static void CreatePasswordHash(string password, out byte[] hash, out byte[] salt)
+        {
+            salt = new byte[16];
+            using (var rng = RandomNumberGenerator.Create())
+                rng.GetBytes(salt);
+
+            hash = ComputeHash(password, salt);
+        }
     }
 }

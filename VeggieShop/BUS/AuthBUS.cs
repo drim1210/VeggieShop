@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using VeggieShop.DAL;
 using VeggieShop.DTO;
 using VeggieShop.Utils;
@@ -38,6 +33,8 @@ namespace VeggieShop.BUS
                 FullName = name,
                 RoleName = role
             };
+
+            
 
             return (true, "OK", session);
         }

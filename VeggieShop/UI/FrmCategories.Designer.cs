@@ -220,8 +220,7 @@
             this.Controls.Add(this.txtSearch);
             this.Name = "FrmCategories";
             this.Text = "FrmCategories";
-            this.Load += new System.EventHandler(this.FrmCategories_Load_1);
-            this.Click += new System.EventHandler(this.FrmCategories_Load);
+            this.Load += new System.EventHandler(this.FrmCategories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
